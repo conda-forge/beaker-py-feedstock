@@ -1,4 +1,4 @@
-{% set version = "1.7.1" %}
+{% set version = "1.7.4" %}
 
 package:
   name: beaker-py
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/allenai/beaker-py/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d521e849776c4626db38787b1dbc76350827ccbbdd38ada98743857888bf4d3a
+  sha256: cc8348c9e2899d198db72ea34ee12436e789e91a2e1629169629d077e34adfd6
 
 build:
   noarch: python
