@@ -10,15 +10,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - docker-py >=5.0,<7
     - packaging
     - pydantic >=1.8.2,<1.11
@@ -30,6 +31,7 @@ test:
   requires:
     - pip
     # - pytest
+    - python {{ python_min }}
   imports:
     - beaker
   # basically all tests require a token we don't have. Perhaps
